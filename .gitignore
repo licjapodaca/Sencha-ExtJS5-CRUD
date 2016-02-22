@@ -242,3 +242,4 @@ ext/
 build/
 Sencha/bootstrap.json
 build.settings
+/PrototipoFrontend/Sencha/bootstrap.json
