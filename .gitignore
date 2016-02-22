@@ -240,5 +240,5 @@ ext/
 .idea/
 .architect
 build/
-bootstrap.json
+Sencha/bootstrap.json
 build.settings
