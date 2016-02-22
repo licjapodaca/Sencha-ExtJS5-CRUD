@@ -1,0 +1,55 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "name": "PrototipoWeb",
+        "requires": [
+            "Ext.window.Toast",
+            "PrototipoWeb.clases.Diccionario",
+            "PrototipoWeb.clases.ProcesoCarga",
+            "Ext.form.RadioGroup",
+            "Ext.form.field.Date",
+            "Ext.grid.column.Number",
+            "Ext.grid.column.Widget",
+            "Ext.grid.column.Date"
+        ],
+        "views": [
+            "personas.PanelPrincipal",
+            "personas.wVentanaCapturaPersona"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "Ext.Loader",
+            "reference": {
+                "name": "loader",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "Loader30",
+            "designerId": "d28fc37b-c901-46d1-abeb-7ce643f6f001"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "ProcesoCarga.launch();"
+                ]
+            },
+            "name": "launch",
+            "designerId": "07df8444-bc4e-4a10-b7c7-0ee076757d70"
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+.aviso {
+    border: 0;
+    padding: 4px;
+    border-radius: 4px;
+    background-color: #2661c4;
+    color: #ffffff;
+}
+
+.mensaje {
+    border-left: 5px solid #2661c4;
+    background-color: #bdd6ff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 0 4px 4px 0;
+}
+
+.valorNulo {
+    color: red;
+    font-weight: bold;
+}
+
+/* INICIO-M001 - Estilos para desaparecer el borde de un combobox de lectura en el Grid de Datos */
+
+.miGrid .x-form-trigger-wrap-default {
+    border-style: none !important;
+}
+
+.miGrid .x-form-text-default {
+    background-color: transparent !important;
+}
+
+/* FIN-M001 */
+
+.delayAnimation {
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    -ms-animation-delay: 1s;
+}

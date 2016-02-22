@@ -1,0 +1,26 @@
+CACHE MANIFEST
+# e84f9ee45dbfa6d0b994d7a939288ef74abc6d96
+app.js
+# ea8b7dd06b4f62512f890b062b9594f7291d8c48
+app.json
+# 19ccfa13b0888fc47e12c953e5556ef6978a53f1
+microloader.js
+# 6e9f7d4e0e68a61772e4724d7d1c1a122fffd685
+resources/PrototipoWeb-all.css
+# e4ffb449dd612d6fb7251f406c0ee2dedd308f82
+resources/PrototipoWeb-all_01.css
+# d2545e3e560a96dc58e7e5ff05376801fbd10a17
+resources/PrototipoWeb-all_02.css
+# 12d6861075de8e293265ff6ff03b1f3adcb44c76
+resources/css/font-awesome.min.css
+# b11aacb1868d4f4b9c9a14fe7668de2e24e7b96f
+resources/css/animate.min.css
+# 8c5eb5e428a5753258f1274372fa9ae533d6fb82
+data/configuracion.json
+
+
+FALLBACK:
+
+
+NETWORK:
+*

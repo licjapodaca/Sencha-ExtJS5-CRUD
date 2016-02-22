@@ -1,0 +1,35 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "personaswventanacapturapersona",
+        "designer|userClassName": "personas.wVentanaCapturaPersonaViewController"
+    },
+    "designerId": "9c22ebb7-87c8-4d2e-b6b8-d6c7633f7731",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "textfield",
+                "designer|targetType": "Ext.form.field.Text",
+                "fn": "onTextfieldSpecialkey",
+                "implHandler": [
+                    ""
+                ],
+                "name": "specialkey",
+                "scope": "me"
+            },
+            "name": "onTextfieldSpecialkey",
+            "designerId": "2e1d99c8-cab6-4a10-9301-e2023369b5c0"
+        }
+    ]
+}

@@ -1,0 +1,1175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{298918E6-B08A-4F49-A0A4-A82D134B4B09}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Portal</RootNamespace>
+    <AssemblyName>Portal</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Sencha\app.js" />
+    <Content Include="Sencha\index.html" />
+    <Content Include="Sencha\microloader.js" />
+    <Content Include="Sencha\resources\.arch-internal-preview.css" />
+    <Content Include="Sencha\resources\css\animate.min.css" />
+    <Content Include="Sencha\resources\css\font-awesome.min.css" />
+    <Content Include="Sencha\resources\fonts\fontawesome-webfont.svg" />
+    <Content Include="Sencha\resources\images\breadcrumb\default-arrow-open-rtl.png" />
+    <Content Include="Sencha\resources\images\breadcrumb\default-arrow-open.png" />
+    <Content Include="Sencha\resources\images\breadcrumb\default-arrow-rtl.png" />
+    <Content Include="Sencha\resources\images\breadcrumb\default-arrow.png" />
+    <Content Include="Sencha\resources\images\breadcrumb\default-scroll-left.png" />
+    <Content Include="Sencha\resources\images\breadcrumb\default-scroll-right.png" />
+    <Content Include="Sencha\resources\images\breadcrumb\default-split-arrow-open-rtl.png" />
+    <Content Include="Sencha\resources\images\breadcrumb\default-split-arrow-open.png" />
+    <Content Include="Sencha\resources\images\breadcrumb\default-split-arrow-over-rtl.png" />
+    <Content Include="Sencha\resources\images\breadcrumb\default-split-arrow-over.png" />
+    <Content Include="Sencha\resources\images\breadcrumb\default-split-arrow-rtl.png" />
+    <Content Include="Sencha\resources\images\breadcrumb\default-split-arrow.png" />
+    <Content Include="Sencha\resources\images\btn-group\btn-group-default-framed-corners.gif" />
+    <Content Include="Sencha\resources\images\btn-group\btn-group-default-framed-notitle-corners.gif" />
+    <Content Include="Sencha\resources\images\btn-group\btn-group-default-framed-notitle-sides.gif" />
+    <Content Include="Sencha\resources\images\btn-group\btn-group-default-framed-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-large-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-large-disabled-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-large-disabled-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-large-disabled-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-large-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-large-focus-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-large-focus-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-large-focus-over-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-large-focus-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-large-focus-over-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-large-focus-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-large-focus-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-large-focus-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-large-focus-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-large-over-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-large-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-large-over-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-large-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-large-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-large-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-large-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-medium-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-medium-disabled-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-medium-disabled-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-medium-disabled-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-medium-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-medium-focus-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-medium-focus-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-medium-focus-over-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-medium-focus-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-medium-focus-over-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-medium-focus-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-medium-focus-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-medium-focus-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-medium-focus-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-medium-over-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-medium-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-medium-over-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-medium-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-medium-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-medium-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-medium-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-small-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-small-disabled-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-small-disabled-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-small-disabled-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-small-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-small-focus-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-small-focus-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-small-focus-over-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-small-focus-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-small-focus-over-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-small-focus-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-small-focus-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-small-focus-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-small-focus-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-small-over-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-small-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-small-over-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-small-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-small-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-small-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-small-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-large-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-large-disabled-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-large-disabled-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-large-disabled-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-large-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-large-focus-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-large-focus-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-large-focus-over-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-large-focus-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-large-focus-over-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-large-focus-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-large-focus-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-large-focus-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-large-focus-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-large-over-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-large-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-large-over-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-large-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-large-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-large-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-large-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-medium-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-medium-disabled-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-medium-disabled-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-medium-disabled-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-medium-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-medium-focus-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-medium-focus-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-medium-focus-over-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-medium-focus-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-medium-focus-over-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-medium-focus-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-medium-focus-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-medium-focus-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-medium-focus-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-medium-over-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-medium-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-medium-over-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-medium-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-medium-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-medium-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-medium-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-small-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-small-disabled-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-small-disabled-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-small-disabled-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-small-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-small-focus-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-small-focus-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-small-focus-over-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-small-focus-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-small-focus-over-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-small-focus-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-small-focus-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-small-focus-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-small-focus-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-small-over-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-small-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-small-over-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-small-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-small-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-small-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-default-toolbar-small-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-large-focus-over-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-large-focus-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-large-focus-over-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-large-focus-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-large-focus-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-large-focus-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-large-over-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-large-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-large-over-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-large-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-large-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-large-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-medium-focus-over-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-medium-focus-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-medium-focus-over-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-medium-focus-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-medium-focus-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-medium-focus-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-medium-over-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-medium-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-medium-over-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-medium-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-medium-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-medium-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-small-focus-over-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-small-focus-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-small-focus-over-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-small-focus-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-small-focus-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-small-focus-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-small-over-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-small-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-small-over-sides.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-small-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-small-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\btn\btn-plain-toolbar-small-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\button\default-large-arrow-rtl.png" />
+    <Content Include="Sencha\resources\images\button\default-large-arrow.png" />
+    <Content Include="Sencha\resources\images\button\default-large-s-arrow-b-rtl.png" />
+    <Content Include="Sencha\resources\images\button\default-large-s-arrow-b.png" />
+    <Content Include="Sencha\resources\images\button\default-large-s-arrow-rtl.png" />
+    <Content Include="Sencha\resources\images\button\default-large-s-arrow.png" />
+    <Content Include="Sencha\resources\images\button\default-medium-arrow-rtl.png" />
+    <Content Include="Sencha\resources\images\button\default-medium-arrow.png" />
+    <Content Include="Sencha\resources\images\button\default-medium-s-arrow-b-rtl.png" />
+    <Content Include="Sencha\resources\images\button\default-medium-s-arrow-b.png" />
+    <Content Include="Sencha\resources\images\button\default-medium-s-arrow-rtl.png" />
+    <Content Include="Sencha\resources\images\button\default-medium-s-arrow.png" />
+    <Content Include="Sencha\resources\images\button\default-small-arrow-rtl.png" />
+    <Content Include="Sencha\resources\images\button\default-small-arrow.png" />
+    <Content Include="Sencha\resources\images\button\default-small-s-arrow-b-rtl.png" />
+    <Content Include="Sencha\resources\images\button\default-small-s-arrow-b.png" />
+    <Content Include="Sencha\resources\images\button\default-small-s-arrow-rtl.png" />
+    <Content Include="Sencha\resources\images\button\default-small-s-arrow.png" />
+    <Content Include="Sencha\resources\images\button\default-toolbar-large-arrow-rtl.png" />
+    <Content Include="Sencha\resources\images\button\default-toolbar-large-arrow.png" />
+    <Content Include="Sencha\resources\images\button\default-toolbar-large-s-arrow-b-rtl.png" />
+    <Content Include="Sencha\resources\images\button\default-toolbar-large-s-arrow-b.png" />
+    <Content Include="Sencha\resources\images\button\default-toolbar-large-s-arrow-rtl.png" />
+    <Content Include="Sencha\resources\images\button\default-toolbar-large-s-arrow.png" />
+    <Content Include="Sencha\resources\images\button\default-toolbar-medium-arrow-rtl.png" />
+    <Content Include="Sencha\resources\images\button\default-toolbar-medium-arrow.png" />
+    <Content Include="Sencha\resources\images\button\default-toolbar-medium-s-arrow-b-rtl.png" />
+    <Content Include="Sencha\resources\images\button\default-toolbar-medium-s-arrow-b.png" />
+    <Content Include="Sencha\resources\images\button\default-toolbar-medium-s-arrow-rtl.png" />
+    <Content Include="Sencha\resources\images\button\default-toolbar-medium-s-arrow.png" />
+    <Content Include="Sencha\resources\images\button\default-toolbar-small-arrow-rtl.png" />
+    <Content Include="Sencha\resources\images\button\default-toolbar-small-arrow.png" />
+    <Content Include="Sencha\resources\images\button\default-toolbar-small-s-arrow-b-rtl.png" />
+    <Content Include="Sencha\resources\images\button\default-toolbar-small-s-arrow-b.png" />
+    <Content Include="Sencha\resources\images\button\default-toolbar-small-s-arrow-rtl.png" />
+    <Content Include="Sencha\resources\images\button\default-toolbar-small-s-arrow.png" />
+    <Content Include="Sencha\resources\images\button\grid-cell-small-arrow-rtl.png" />
+    <Content Include="Sencha\resources\images\button\grid-cell-small-arrow.png" />
+    <Content Include="Sencha\resources\images\button\grid-cell-small-s-arrow-b.png" />
+    <Content Include="Sencha\resources\images\button\grid-cell-small-s-arrow-rtl.png" />
+    <Content Include="Sencha\resources\images\button\grid-cell-small-s-arrow.png" />
+    <Content Include="Sencha\resources\images\button\plain-toolbar-large-arrow-rtl.png" />
+    <Content Include="Sencha\resources\images\button\plain-toolbar-large-arrow.png" />
+    <Content Include="Sencha\resources\images\button\plain-toolbar-large-s-arrow-b-rtl.png" />
+    <Content Include="Sencha\resources\images\button\plain-toolbar-large-s-arrow-b.png" />
+    <Content Include="Sencha\resources\images\button\plain-toolbar-large-s-arrow-rtl.png" />
+    <Content Include="Sencha\resources\images\button\plain-toolbar-large-s-arrow.png" />
+    <Content Include="Sencha\resources\images\button\plain-toolbar-medium-arrow-rtl.png" />
+    <Content Include="Sencha\resources\images\button\plain-toolbar-medium-arrow.png" />
+    <Content Include="Sencha\resources\images\button\plain-toolbar-medium-s-arrow-b-rtl.png" />
+    <Content Include="Sencha\resources\images\button\plain-toolbar-medium-s-arrow-b.png" />
+    <Content Include="Sencha\resources\images\button\plain-toolbar-medium-s-arrow-rtl.png" />
+    <Content Include="Sencha\resources\images\button\plain-toolbar-medium-s-arrow.png" />
+    <Content Include="Sencha\resources\images\button\plain-toolbar-small-arrow-rtl.png" />
+    <Content Include="Sencha\resources\images\button\plain-toolbar-small-arrow.png" />
+    <Content Include="Sencha\resources\images\button\plain-toolbar-small-s-arrow-b-rtl.png" />
+    <Content Include="Sencha\resources\images\button\plain-toolbar-small-s-arrow-b.png" />
+    <Content Include="Sencha\resources\images\button\plain-toolbar-small-s-arrow-rtl.png" />
+    <Content Include="Sencha\resources\images\button\plain-toolbar-small-s-arrow.png" />
+    <Content Include="Sencha\resources\images\datepicker\arrow-left.png" />
+    <Content Include="Sencha\resources\images\datepicker\arrow-right.png" />
+    <Content Include="Sencha\resources\images\datepicker\month-arrow.png" />
+    <Content Include="Sencha\resources\images\dd\drop-add.png" />
+    <Content Include="Sencha\resources\images\dd\drop-no.png" />
+    <Content Include="Sencha\resources\images\dd\drop-yes.png" />
+    <Content Include="Sencha\resources\images\editor\tb-sprite.png" />
+    <Content Include="Sencha\resources\images\fieldset\collapse-tool.png" />
+    <Content Include="Sencha\resources\images\form\checkbox.png" />
+    <Content Include="Sencha\resources\images\form\clear-trigger-rtl.png" />
+    <Content Include="Sencha\resources\images\form\clear-trigger.png" />
+    <Content Include="Sencha\resources\images\form\date-trigger-rtl.png" />
+    <Content Include="Sencha\resources\images\form\date-trigger.png" />
+    <Content Include="Sencha\resources\images\form\exclamation.png" />
+    <Content Include="Sencha\resources\images\form\radio.png" />
+    <Content Include="Sencha\resources\images\form\search-trigger-rtl.png" />
+    <Content Include="Sencha\resources\images\form\search-trigger.png" />
+    <Content Include="Sencha\resources\images\form\spinner-rtl.png" />
+    <Content Include="Sencha\resources\images\form\spinner.png" />
+    <Content Include="Sencha\resources\images\form\tag-field-item-close.png" />
+    <Content Include="Sencha\resources\images\form\trigger-rtl.png" />
+    <Content Include="Sencha\resources\images\form\trigger.png" />
+    <Content Include="Sencha\resources\images\grid-row-editor-buttons\grid-row-editor-buttons-default-bottom-corners.gif" />
+    <Content Include="Sencha\resources\images\grid-row-editor-buttons\grid-row-editor-buttons-default-bottom-sides.gif" />
+    <Content Include="Sencha\resources\images\grid-row-editor-buttons\grid-row-editor-buttons-default-top-corners.gif" />
+    <Content Include="Sencha\resources\images\grid-row-editor-buttons\grid-row-editor-buttons-default-top-sides.gif" />
+    <Content Include="Sencha\resources\images\grid\col-move-bottom.png" />
+    <Content Include="Sencha\resources\images\grid\col-move-top.png" />
+    <Content Include="Sencha\resources\images\grid\columns.png" />
+    <Content Include="Sencha\resources\images\grid\dd-insert-arrow-left.png" />
+    <Content Include="Sencha\resources\images\grid\dd-insert-arrow-right.png" />
+    <Content Include="Sencha\resources\images\grid\dirty-rtl.png" />
+    <Content Include="Sencha\resources\images\grid\dirty.png" />
+    <Content Include="Sencha\resources\images\grid\drop-no.png" />
+    <Content Include="Sencha\resources\images\grid\drop-yes.png" />
+    <Content Include="Sencha\resources\images\grid\filters\equals.png" />
+    <Content Include="Sencha\resources\images\grid\filters\find.png" />
+    <Content Include="Sencha\resources\images\grid\filters\greater_than.png" />
+    <Content Include="Sencha\resources\images\grid\filters\less_than.png" />
+    <Content Include="Sencha\resources\images\grid\group-by.png" />
+    <Content Include="Sencha\resources\images\grid\group-collapse.png" />
+    <Content Include="Sencha\resources\images\grid\group-expand.png" />
+    <Content Include="Sencha\resources\images\grid\hd-pop.png" />
+    <Content Include="Sencha\resources\images\grid\hmenu-asc.png" />
+    <Content Include="Sencha\resources\images\grid\hmenu-desc.png" />
+    <Content Include="Sencha\resources\images\grid\hmenu-lock.png" />
+    <Content Include="Sencha\resources\images\grid\hmenu-unlock.png" />
+    <Content Include="Sencha\resources\images\grid\loading.gif" />
+    <Content Include="Sencha\resources\images\grid\page-first.png" />
+    <Content Include="Sencha\resources\images\grid\page-last.png" />
+    <Content Include="Sencha\resources\images\grid\page-next.png" />
+    <Content Include="Sencha\resources\images\grid\page-prev.png" />
+    <Content Include="Sencha\resources\images\grid\pick-button.png" />
+    <Content Include="Sencha\resources\images\grid\refresh.png" />
+    <Content Include="Sencha\resources\images\grid\sort_asc.png" />
+    <Content Include="Sencha\resources\images\grid\sort_desc.png" />
+    <Content Include="Sencha\resources\images\images\btn-group\btn-group-default-framed-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn-group\btn-group-default-framed-notitle-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn-group\btn-group-default-framed-notitle-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn-group\btn-group-default-framed-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-large-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-large-disabled-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-large-disabled-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-large-disabled-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-large-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-large-focus-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-large-focus-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-large-focus-over-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-large-focus-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-large-focus-over-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-large-focus-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-large-focus-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-large-focus-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-large-focus-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-large-over-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-large-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-large-over-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-large-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-large-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-large-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-large-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-medium-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-medium-disabled-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-medium-disabled-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-medium-disabled-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-medium-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-medium-focus-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-medium-focus-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-medium-focus-over-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-medium-focus-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-medium-focus-over-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-medium-focus-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-medium-focus-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-medium-focus-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-medium-focus-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-medium-over-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-medium-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-medium-over-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-medium-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-medium-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-medium-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-medium-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-small-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-small-disabled-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-small-disabled-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-small-disabled-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-small-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-small-focus-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-small-focus-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-small-focus-over-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-small-focus-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-small-focus-over-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-small-focus-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-small-focus-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-small-focus-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-small-focus-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-small-over-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-small-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-small-over-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-small-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-small-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-small-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-small-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-large-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-large-disabled-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-large-disabled-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-large-disabled-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-large-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-large-focus-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-large-focus-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-large-focus-over-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-large-focus-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-large-focus-over-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-large-focus-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-large-focus-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-large-focus-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-large-focus-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-large-over-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-large-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-large-over-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-large-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-large-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-large-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-large-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-medium-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-medium-disabled-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-medium-disabled-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-medium-disabled-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-medium-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-medium-focus-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-medium-focus-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-medium-focus-over-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-medium-focus-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-medium-focus-over-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-medium-focus-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-medium-focus-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-medium-focus-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-medium-focus-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-medium-over-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-medium-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-medium-over-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-medium-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-medium-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-medium-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-medium-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-small-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-small-disabled-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-small-disabled-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-small-disabled-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-small-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-small-focus-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-small-focus-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-small-focus-over-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-small-focus-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-small-focus-over-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-small-focus-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-small-focus-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-small-focus-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-small-focus-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-small-over-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-small-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-small-over-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-small-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-small-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-small-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-default-toolbar-small-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-large-focus-over-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-large-focus-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-large-focus-over-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-large-focus-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-large-focus-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-large-focus-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-large-over-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-large-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-large-over-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-large-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-large-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-large-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-medium-focus-over-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-medium-focus-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-medium-focus-over-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-medium-focus-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-medium-focus-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-medium-focus-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-medium-over-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-medium-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-medium-over-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-medium-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-medium-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-medium-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-small-focus-over-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-small-focus-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-small-focus-over-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-small-focus-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-small-focus-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-small-focus-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-small-over-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-small-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-small-over-sides.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-small-pressed-corners.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-small-pressed-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\btn\btn-plain-toolbar-small-pressed-sides.gif" />
+    <Content Include="Sencha\resources\images\images\grid-row-editor-buttons\grid-row-editor-buttons-default-bottom-corners.gif" />
+    <Content Include="Sencha\resources\images\images\grid-row-editor-buttons\grid-row-editor-buttons-default-bottom-sides.gif" />
+    <Content Include="Sencha\resources\images\images\grid-row-editor-buttons\grid-row-editor-buttons-default-top-corners.gif" />
+    <Content Include="Sencha\resources\images\images\grid-row-editor-buttons\grid-row-editor-buttons-default-top-sides.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-default-framed-bottom-corners.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-default-framed-bottom-sides.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-default-framed-collapsed-bottom-corners.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-default-framed-collapsed-bottom-sides.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-default-framed-collapsed-left-corners-rtl.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-default-framed-collapsed-left-corners.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-default-framed-collapsed-left-sides.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-default-framed-collapsed-right-corners-rtl.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-default-framed-collapsed-right-corners.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-default-framed-collapsed-right-sides.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-default-framed-collapsed-top-corners.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-default-framed-collapsed-top-sides.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-default-framed-left-corners-rtl.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-default-framed-left-corners.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-default-framed-left-sides.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-default-framed-right-corners-rtl.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-default-framed-right-corners.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-default-framed-right-sides.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-default-framed-top-corners.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-default-framed-top-sides.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-light-framed-bottom-corners.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-light-framed-bottom-sides.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-light-framed-collapsed-bottom-corners.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-light-framed-collapsed-bottom-sides.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-light-framed-collapsed-left-corners-rtl.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-light-framed-collapsed-left-corners.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-light-framed-collapsed-left-sides.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-light-framed-collapsed-right-corners-rtl.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-light-framed-collapsed-right-corners.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-light-framed-collapsed-right-sides.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-light-framed-collapsed-top-corners.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-light-framed-collapsed-top-sides.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-light-framed-left-corners-rtl.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-light-framed-left-corners.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-light-framed-left-sides.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-light-framed-right-corners-rtl.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-light-framed-right-corners.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-light-framed-right-sides.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-light-framed-top-corners.gif" />
+    <Content Include="Sencha\resources\images\images\panel-header\panel-header-light-framed-top-sides.gif" />
+    <Content Include="Sencha\resources\images\images\panel\panel-default-framed-corners.gif" />
+    <Content Include="Sencha\resources\images\images\panel\panel-default-framed-sides.gif" />
+    <Content Include="Sencha\resources\images\images\panel\panel-light-framed-corners.gif" />
+    <Content Include="Sencha\resources\images\images\panel\panel-light-framed-sides.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-bottom-active-corners.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-bottom-active-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-bottom-active-sides.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-bottom-corners.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-bottom-disabled-corners.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-bottom-disabled-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-bottom-disabled-sides.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-bottom-focus-active-corners.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-bottom-focus-active-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-bottom-focus-active-sides.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-bottom-focus-corners.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-bottom-focus-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-bottom-focus-over-corners.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-bottom-focus-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-bottom-focus-over-sides.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-bottom-focus-sides.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-bottom-over-corners.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-bottom-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-bottom-over-sides.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-bottom-sides.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-left-active-corners.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-left-active-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-left-active-sides.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-left-corners.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-left-disabled-corners.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-left-disabled-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-left-disabled-sides.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-left-focus-active-corners.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-left-focus-active-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-left-focus-active-sides.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-left-focus-corners.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-left-focus-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-left-focus-over-corners.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-left-focus-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-left-focus-over-sides.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-left-focus-sides.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-left-over-corners.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-left-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-left-over-sides.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-left-sides.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-right-active-corners.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-right-active-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-right-active-sides.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-right-corners.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-right-disabled-corners.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-right-disabled-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-right-disabled-sides.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-right-focus-active-corners.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-right-focus-active-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-right-focus-active-sides.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-right-focus-corners.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-right-focus-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-right-focus-over-corners.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-right-focus-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-right-focus-over-sides.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-right-focus-sides.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-right-over-corners.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-right-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-right-over-sides.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-right-sides.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-top-active-corners.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-top-active-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-top-active-sides.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-top-corners.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-top-disabled-corners.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-top-disabled-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-top-disabled-sides.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-top-focus-active-corners.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-top-focus-active-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-top-focus-active-sides.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-top-focus-corners.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-top-focus-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-top-focus-over-corners.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-top-focus-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-top-focus-over-sides.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-top-focus-sides.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-top-over-corners.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-top-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-top-over-sides.gif" />
+    <Content Include="Sencha\resources\images\images\tab\tab-default-top-sides.gif" />
+    <Content Include="Sencha\resources\images\images\tip\tip-default-corners.gif" />
+    <Content Include="Sencha\resources\images\images\tip\tip-default-sides.gif" />
+    <Content Include="Sencha\resources\images\images\tip\tip-form-invalid-corners.gif" />
+    <Content Include="Sencha\resources\images\images\tip\tip-form-invalid-sides.gif" />
+    <Content Include="Sencha\resources\images\images\window-header\window-header-default-bottom-corners.gif" />
+    <Content Include="Sencha\resources\images\images\window-header\window-header-default-bottom-sides.gif" />
+    <Content Include="Sencha\resources\images\images\window-header\window-header-default-collapsed-bottom-corners.gif" />
+    <Content Include="Sencha\resources\images\images\window-header\window-header-default-collapsed-bottom-sides.gif" />
+    <Content Include="Sencha\resources\images\images\window-header\window-header-default-collapsed-left-corners-rtl.gif" />
+    <Content Include="Sencha\resources\images\images\window-header\window-header-default-collapsed-left-corners.gif" />
+    <Content Include="Sencha\resources\images\images\window-header\window-header-default-collapsed-left-sides.gif" />
+    <Content Include="Sencha\resources\images\images\window-header\window-header-default-collapsed-right-corners-rtl.gif" />
+    <Content Include="Sencha\resources\images\images\window-header\window-header-default-collapsed-right-corners.gif" />
+    <Content Include="Sencha\resources\images\images\window-header\window-header-default-collapsed-right-sides.gif" />
+    <Content Include="Sencha\resources\images\images\window-header\window-header-default-collapsed-top-corners.gif" />
+    <Content Include="Sencha\resources\images\images\window-header\window-header-default-collapsed-top-sides.gif" />
+    <Content Include="Sencha\resources\images\images\window-header\window-header-default-left-corners-rtl.gif" />
+    <Content Include="Sencha\resources\images\images\window-header\window-header-default-left-corners.gif" />
+    <Content Include="Sencha\resources\images\images\window-header\window-header-default-left-sides.gif" />
+    <Content Include="Sencha\resources\images\images\window-header\window-header-default-right-corners-rtl.gif" />
+    <Content Include="Sencha\resources\images\images\window-header\window-header-default-right-corners.gif" />
+    <Content Include="Sencha\resources\images\images\window-header\window-header-default-right-sides.gif" />
+    <Content Include="Sencha\resources\images\images\window-header\window-header-default-top-corners.gif" />
+    <Content Include="Sencha\resources\images\images\window-header\window-header-default-top-sides.gif" />
+    <Content Include="Sencha\resources\images\images\window\window-default-corners.gif" />
+    <Content Include="Sencha\resources\images\images\window\window-default-sides.gif" />
+    <Content Include="Sencha\resources\images\loadmask\loading.gif" />
+    <Content Include="Sencha\resources\images\magnify.png" />
+    <Content Include="Sencha\resources\images\menu\default-checked.png" />
+    <Content Include="Sencha\resources\images\menu\default-group-checked.png" />
+    <Content Include="Sencha\resources\images\menu\default-menu-parent-left.png" />
+    <Content Include="Sencha\resources\images\menu\default-menu-parent.png" />
+    <Content Include="Sencha\resources\images\menu\default-scroll-bottom.png" />
+    <Content Include="Sencha\resources\images\menu\default-scroll-top.png" />
+    <Content Include="Sencha\resources\images\menu\default-unchecked.png" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-default-framed-bottom-corners.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-default-framed-bottom-sides.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-default-framed-collapsed-bottom-corners.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-default-framed-collapsed-bottom-sides.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-default-framed-collapsed-left-corners-rtl.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-default-framed-collapsed-left-corners.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-default-framed-collapsed-left-sides.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-default-framed-collapsed-right-corners-rtl.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-default-framed-collapsed-right-corners.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-default-framed-collapsed-right-sides.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-default-framed-collapsed-top-corners.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-default-framed-collapsed-top-sides.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-default-framed-left-corners-rtl.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-default-framed-left-corners.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-default-framed-left-sides.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-default-framed-right-corners-rtl.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-default-framed-right-corners.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-default-framed-right-sides.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-default-framed-top-corners.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-default-framed-top-sides.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-light-framed-bottom-corners.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-light-framed-bottom-sides.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-light-framed-collapsed-bottom-corners.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-light-framed-collapsed-bottom-sides.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-light-framed-collapsed-left-corners-rtl.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-light-framed-collapsed-left-corners.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-light-framed-collapsed-left-sides.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-light-framed-collapsed-right-corners-rtl.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-light-framed-collapsed-right-corners.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-light-framed-collapsed-right-sides.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-light-framed-collapsed-top-corners.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-light-framed-collapsed-top-sides.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-light-framed-left-corners-rtl.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-light-framed-left-corners.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-light-framed-left-sides.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-light-framed-right-corners-rtl.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-light-framed-right-corners.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-light-framed-right-sides.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-light-framed-top-corners.gif" />
+    <Content Include="Sencha\resources\images\panel-header\panel-header-light-framed-top-sides.gif" />
+    <Content Include="Sencha\resources\images\panel\panel-default-framed-corners.gif" />
+    <Content Include="Sencha\resources\images\panel\panel-default-framed-sides.gif" />
+    <Content Include="Sencha\resources\images\panel\panel-light-framed-corners.gif" />
+    <Content Include="Sencha\resources\images\panel\panel-light-framed-sides.gif" />
+    <Content Include="Sencha\resources\images\shared\icon-error.png" />
+    <Content Include="Sencha\resources\images\shared\icon-info.png" />
+    <Content Include="Sencha\resources\images\shared\icon-question.png" />
+    <Content Include="Sencha\resources\images\shared\icon-warning.png" />
+    <Content Include="Sencha\resources\images\sizer\e-handle.png" />
+    <Content Include="Sencha\resources\images\sizer\ne-handle.png" />
+    <Content Include="Sencha\resources\images\sizer\nw-handle.png" />
+    <Content Include="Sencha\resources\images\sizer\s-handle.png" />
+    <Content Include="Sencha\resources\images\sizer\se-handle.png" />
+    <Content Include="Sencha\resources\images\sizer\sw-handle.png" />
+    <Content Include="Sencha\resources\images\slider\slider-bg.png" />
+    <Content Include="Sencha\resources\images\slider\slider-thumb.png" />
+    <Content Include="Sencha\resources\images\slider\slider-v-bg.png" />
+    <Content Include="Sencha\resources\images\slider\slider-v-thumb.png" />
+    <Content Include="Sencha\resources\images\tab-bar\default-plain-scroll-bottom.png" />
+    <Content Include="Sencha\resources\images\tab-bar\default-plain-scroll-left.png" />
+    <Content Include="Sencha\resources\images\tab-bar\default-plain-scroll-right.png" />
+    <Content Include="Sencha\resources\images\tab-bar\default-plain-scroll-top.png" />
+    <Content Include="Sencha\resources\images\tab-bar\default-scroll-bottom.png" />
+    <Content Include="Sencha\resources\images\tab-bar\default-scroll-left.png" />
+    <Content Include="Sencha\resources\images\tab-bar\default-scroll-right.png" />
+    <Content Include="Sencha\resources\images\tab-bar\default-scroll-top.png" />
+    <Content Include="Sencha\resources\images\tab\tab-default-bottom-active-corners.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-bottom-active-fbg.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-bottom-active-sides.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-bottom-corners.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-bottom-disabled-corners.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-bottom-disabled-fbg.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-bottom-disabled-sides.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-bottom-focus-active-corners.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-bottom-focus-active-fbg.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-bottom-focus-active-sides.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-bottom-focus-corners.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-bottom-focus-fbg.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-bottom-focus-over-corners.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-bottom-focus-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-bottom-focus-over-sides.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-bottom-focus-sides.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-bottom-over-corners.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-bottom-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-bottom-over-sides.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-bottom-sides.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-close.png" />
+    <Content Include="Sencha\resources\images\tab\tab-default-left-active-corners.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-left-active-fbg.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-left-active-sides.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-left-corners.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-left-disabled-corners.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-left-disabled-fbg.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-left-disabled-sides.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-left-focus-active-corners.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-left-focus-active-fbg.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-left-focus-active-sides.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-left-focus-corners.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-left-focus-fbg.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-left-focus-over-corners.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-left-focus-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-left-focus-over-sides.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-left-focus-sides.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-left-over-corners.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-left-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-left-over-sides.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-left-sides.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-right-active-corners.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-right-active-fbg.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-right-active-sides.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-right-corners.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-right-disabled-corners.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-right-disabled-fbg.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-right-disabled-sides.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-right-focus-active-corners.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-right-focus-active-fbg.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-right-focus-active-sides.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-right-focus-corners.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-right-focus-fbg.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-right-focus-over-corners.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-right-focus-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-right-focus-over-sides.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-right-focus-sides.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-right-over-corners.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-right-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-right-over-sides.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-right-sides.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-top-active-corners.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-top-active-fbg.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-top-active-sides.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-top-corners.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-top-disabled-corners.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-top-disabled-fbg.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-top-disabled-sides.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-top-focus-active-corners.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-top-focus-active-fbg.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-top-focus-active-sides.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-top-focus-corners.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-top-focus-fbg.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-top-focus-over-corners.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-top-focus-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-top-focus-over-sides.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-top-focus-sides.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-top-over-corners.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-top-over-fbg.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-top-over-sides.gif" />
+    <Content Include="Sencha\resources\images\tab\tab-default-top-sides.gif" />
+    <Content Include="Sencha\resources\images\tip\tip-default-corners.gif" />
+    <Content Include="Sencha\resources\images\tip\tip-default-sides.gif" />
+    <Content Include="Sencha\resources\images\tip\tip-form-invalid-corners.gif" />
+    <Content Include="Sencha\resources\images\tip\tip-form-invalid-sides.gif" />
+    <Content Include="Sencha\resources\images\toolbar\default-more-left.png" />
+    <Content Include="Sencha\resources\images\toolbar\default-more.png" />
+    <Content Include="Sencha\resources\images\toolbar\default-scroll-bottom.png" />
+    <Content Include="Sencha\resources\images\toolbar\default-scroll-left.png" />
+    <Content Include="Sencha\resources\images\toolbar\default-scroll-right.png" />
+    <Content Include="Sencha\resources\images\toolbar\default-scroll-top.png" />
+    <Content Include="Sencha\resources\images\toolbar\footer-more-left.png" />
+    <Content Include="Sencha\resources\images\toolbar\footer-more.png" />
+    <Content Include="Sencha\resources\images\toolbar\footer-scroll-left.png" />
+    <Content Include="Sencha\resources\images\toolbar\footer-scroll-right.png" />
+    <Content Include="Sencha\resources\images\tools\tool-sprites-dark.png" />
+    <Content Include="Sencha\resources\images\tools\tool-sprites.png" />
+    <Content Include="Sencha\resources\images\tree\arrows-rtl.png" />
+    <Content Include="Sencha\resources\images\tree\arrows.png" />
+    <Content Include="Sencha\resources\images\tree\drop-above.png" />
+    <Content Include="Sencha\resources\images\tree\drop-add.gif" />
+    <Content Include="Sencha\resources\images\tree\drop-add.png" />
+    <Content Include="Sencha\resources\images\tree\drop-append.png" />
+    <Content Include="Sencha\resources\images\tree\drop-below.png" />
+    <Content Include="Sencha\resources\images\tree\drop-between.gif" />
+    <Content Include="Sencha\resources\images\tree\drop-between.png" />
+    <Content Include="Sencha\resources\images\tree\drop-no.gif" />
+    <Content Include="Sencha\resources\images\tree\drop-no.png" />
+    <Content Include="Sencha\resources\images\tree\drop-over.gif" />
+    <Content Include="Sencha\resources\images\tree\drop-over.png" />
+    <Content Include="Sencha\resources\images\tree\drop-under.gif" />
+    <Content Include="Sencha\resources\images\tree\drop-under.png" />
+    <Content Include="Sencha\resources\images\tree\drop-yes.gif" />
+    <Content Include="Sencha\resources\images\tree\drop-yes.png" />
+    <Content Include="Sencha\resources\images\tree\elbow-end-minus-rtl.png" />
+    <Content Include="Sencha\resources\images\tree\elbow-end-minus.png" />
+    <Content Include="Sencha\resources\images\tree\elbow-end-plus-rtl.png" />
+    <Content Include="Sencha\resources\images\tree\elbow-end-plus.png" />
+    <Content Include="Sencha\resources\images\tree\elbow-end-rtl.png" />
+    <Content Include="Sencha\resources\images\tree\elbow-end.png" />
+    <Content Include="Sencha\resources\images\tree\elbow-line-rtl.png" />
+    <Content Include="Sencha\resources\images\tree\elbow-line.png" />
+    <Content Include="Sencha\resources\images\tree\elbow-minus-nl-rtl.png" />
+    <Content Include="Sencha\resources\images\tree\elbow-minus-nl.png" />
+    <Content Include="Sencha\resources\images\tree\elbow-minus-rtl.png" />
+    <Content Include="Sencha\resources\images\tree\elbow-minus.png" />
+    <Content Include="Sencha\resources\images\tree\elbow-plus-nl-rtl.png" />
+    <Content Include="Sencha\resources\images\tree\elbow-plus-nl.png" />
+    <Content Include="Sencha\resources\images\tree\elbow-plus-rtl.png" />
+    <Content Include="Sencha\resources\images\tree\elbow-plus.png" />
+    <Content Include="Sencha\resources\images\tree\elbow-rtl.png" />
+    <Content Include="Sencha\resources\images\tree\elbow.png" />
+    <Content Include="Sencha\resources\images\tree\folder-open-rtl.png" />
+    <Content Include="Sencha\resources\images\tree\folder-open.png" />
+    <Content Include="Sencha\resources\images\tree\folder-rtl.png" />
+    <Content Include="Sencha\resources\images\tree\folder.png" />
+    <Content Include="Sencha\resources\images\tree\leaf-rtl.png" />
+    <Content Include="Sencha\resources\images\tree\leaf.png" />
+    <Content Include="Sencha\resources\images\tree\loading.gif" />
+    <Content Include="Sencha\resources\images\util\splitter\mini-bottom.png" />
+    <Content Include="Sencha\resources\images\util\splitter\mini-left.png" />
+    <Content Include="Sencha\resources\images\util\splitter\mini-right.png" />
+    <Content Include="Sencha\resources\images\util\splitter\mini-top.png" />
+    <Content Include="Sencha\resources\images\ux\dashboard\magnify.png" />
+    <Content Include="Sencha\resources\images\window-header\window-header-default-bottom-corners.gif" />
+    <Content Include="Sencha\resources\images\window-header\window-header-default-bottom-sides.gif" />
+    <Content Include="Sencha\resources\images\window-header\window-header-default-collapsed-bottom-corners.gif" />
+    <Content Include="Sencha\resources\images\window-header\window-header-default-collapsed-bottom-sides.gif" />
+    <Content Include="Sencha\resources\images\window-header\window-header-default-collapsed-left-corners-rtl.gif" />
+    <Content Include="Sencha\resources\images\window-header\window-header-default-collapsed-left-corners.gif" />
+    <Content Include="Sencha\resources\images\window-header\window-header-default-collapsed-left-sides.gif" />
+    <Content Include="Sencha\resources\images\window-header\window-header-default-collapsed-right-corners-rtl.gif" />
+    <Content Include="Sencha\resources\images\window-header\window-header-default-collapsed-right-corners.gif" />
+    <Content Include="Sencha\resources\images\window-header\window-header-default-collapsed-right-sides.gif" />
+    <Content Include="Sencha\resources\images\window-header\window-header-default-collapsed-top-corners.gif" />
+    <Content Include="Sencha\resources\images\window-header\window-header-default-collapsed-top-sides.gif" />
+    <Content Include="Sencha\resources\images\window-header\window-header-default-left-corners-rtl.gif" />
+    <Content Include="Sencha\resources\images\window-header\window-header-default-left-corners.gif" />
+    <Content Include="Sencha\resources\images\window-header\window-header-default-left-sides.gif" />
+    <Content Include="Sencha\resources\images\window-header\window-header-default-right-corners-rtl.gif" />
+    <Content Include="Sencha\resources\images\window-header\window-header-default-right-corners.gif" />
+    <Content Include="Sencha\resources\images\window-header\window-header-default-right-sides.gif" />
+    <Content Include="Sencha\resources\images\window-header\window-header-default-top-corners.gif" />
+    <Content Include="Sencha\resources\images\window-header\window-header-default-top-sides.gif" />
+    <Content Include="Sencha\resources\images\window\toast\fade-blue.png" />
+    <Content Include="Sencha\resources\images\window\toast\fader.png" />
+    <Content Include="Sencha\resources\images\window\toast\icon16_error.png" />
+    <Content Include="Sencha\resources\images\window\toast\icon16_info.png" />
+    <Content Include="Sencha\resources\images\window\window-default-corners.gif" />
+    <Content Include="Sencha\resources\images\window\window-default-sides.gif" />
+    <Content Include="Sencha\resources\preview-ext-theme-neptune-53b6f75b-54a3-4878-87da-268c82011b75.css" />
+    <Content Include="Sencha\resources\preview-ext-theme-neptune-a2364073-cd2f-43f7-b3a1-6249fd8a9fd4.css" />
+    <Content Include="Sencha\resources\PrototipoWeb-all.css" />
+    <Content Include="Sencha\resources\PrototipoWeb-all_01.css" />
+    <Content Include="Sencha\resources\PrototipoWeb-all_02.css" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Sencha\app.json" />
+    <Content Include="Sencha\resources\Readme.md" />
+    <Content Include="Sencha\resources\ext-locale\Readme.md" />
+    <Content Include="Sencha\cache.appcache" />
+    <Content Include="Sencha\data\database.json" />
+    <Content Include="Sencha\resources\fonts\fontawesome-webfont.eot" />
+    <Content Include="Sencha\resources\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Sencha\resources\fonts\fontawesome-webfont.woff" />
+    <Content Include="Sencha\resources\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Sencha\resources\fonts\FontAwesome.otf" />
+    <Content Include="Sencha\data\configuracion.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Sencha\archive\" />
+    <Folder Include="Sencha\deltas\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

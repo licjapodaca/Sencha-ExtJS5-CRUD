@@ -234,3 +234,11 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+
+# ASP.NET folders
+ext/
+.idea/
+.architect
+build/
+bootstrap.json
+build.settings

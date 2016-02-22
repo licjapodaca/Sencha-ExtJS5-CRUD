@@ -1,0 +1,32 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "personaspanelprincipal",
+        "designer|userClassName": "personas.PanelPrincipalViewController"
+    },
+    "designerId": "3fd9829e-f1c6-41bf-a36d-0c100aeb04c0",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onButtonClick",
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onButtonClick",
+            "designerId": "2078e716-e5e0-4d79-b99f-63a32d458145"
+        }
+    ]
+}

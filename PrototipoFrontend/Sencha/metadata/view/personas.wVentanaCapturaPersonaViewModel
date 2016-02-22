@@ -1,0 +1,74 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "{",
+            "    persona: {",
+            "        ",
+            "    },",
+            "    agregaRegistro: true,",
+            "    storeRegistro: null,",
+            "    gridRegistro: null,",
+            "    recordPersona: null,",
+            "    camposCol1: null,",
+            "    camposCol2: null,",
+            "    radioGroupFormulas: null",
+            "}"
+        ],
+        "designer|userAlias": "personaswventanacapturapersona",
+        "designer|userClassName": "personas.wVentanaCapturaPersonaViewModel"
+    },
+    "designerId": "b76c4312-a8c5-4fcb-b129-08e00b9354a7",
+    "cn": [
+        {
+            "type": "Ext.app.bind.Formula",
+            "reference": {
+                "name": "formulas",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bind": [
+                    "{",
+                    "    nombre: '{persona.nombre}',",
+                    "    paterno: '{persona.primerApellido}',",
+                    "    materno: '{persona.segundoApellido}'",
+                    "}"
+                ],
+                "name": "nombreCalculado"
+            },
+            "name": "MyFormula",
+            "configAlternates": {
+                "bind": "object"
+            },
+            "designerId": "f54ae21c-b271-4921-9863-7983c3f55683",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "data"
+                        ],
+                        "fn": "get",
+                        "implHandler": [
+                            "var nombreCompleto = Ext.String.format('{0} {1} {2}', Ext.isEmpty(data.nombre) ? \"\" : data.nombre, Ext.isEmpty(data.paterno) ? \"\" : data.paterno, Ext.isEmpty(data.materno) ? \"\" : data.materno);",
+                            "return nombreCompleto.trim();"
+                        ]
+                    },
+                    "name": "get",
+                    "designerId": "9a063f24-b6ea-406e-80af-f87acd7a2687"
+                }
+            ]
+        }
+    ]
+}

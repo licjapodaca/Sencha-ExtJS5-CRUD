@@ -1,0 +1,38 @@
+﻿{
+  "personas": [
+    {
+      "idPersona": 1,
+      "nombre": "Martha",
+      "primerApellido": "Ibañez",
+      "segundoApellido": "Jimenez",
+      "genero": "F",
+      "correo": "mibanez@bts.com.mx",
+      "estadoCivil": 2,
+      "tipoIdentificacion": 2,
+      "numeroIdentificacion": "527238732875638",
+      "usuario": "mibanez",
+      "contrasena": "12345",
+      "sede": 1,
+      "habilitado": true,
+      "fechaNacimiento": "1977-04-19T00:00:00",
+      "observaciones": "No hay ninguna observacion..."
+    },
+    {
+      "idPersona": 2,
+      "nombre": "Jorge Mario",
+      "primerApellido": "Apodaca",
+      "segundoApellido": "Mendoza",
+      "genero": "M",
+      "correo": "japodaca@bts.com.mx",
+      "estadoCivil": 1,
+      "tipoIdentificacion": 1,
+      "numeroIdentificacion": "JHSGS35435678",
+      "usuario": "japodaca",
+      "contrasena": "12345",
+      "sede": 2,
+      "habilitado": true,
+      "fechaNacimiento": "1977-02-22T00:00:00",
+      "observaciones": "En proceso de desarrollo de sitio web..."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+﻿[
+  {
+    "idTipoIdentificacion": 1,
+    "tipoIdentificacionDescripcion": "Credencial de Elector"
+  },
+  {
+    "idTipoIdentificacion": 2,
+    "tipoIdentificacionDescripcion": "Licencia de Conducir"
+  },
+  {
+    "idTipoIdentificacion": 3,
+    "tipoIdentificacionDescripcion": "Pasaporte Mexicano"
+  }
+]

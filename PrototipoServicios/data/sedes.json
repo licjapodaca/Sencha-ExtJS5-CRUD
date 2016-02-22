@@ -1,0 +1,14 @@
+﻿[
+  {
+    "idSede": 1,
+    "sedeDescripcion": "Mexicali, Baja California"
+  },
+  {
+    "idSede": 2,
+    "sedeDescripcion": "Guadalajara, Jalisco"
+  },
+  {
+    "idSede": 3,
+    "sedeDescripcion": "Mexico, D.F."
+  }
+]

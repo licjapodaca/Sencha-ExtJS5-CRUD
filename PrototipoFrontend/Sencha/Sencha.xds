@@ -1,0 +1,61 @@
+{
+    "name": "Sencha",
+    "settings": {
+        "cmd": {
+            "license": "custom",
+            "cmdVersion": "6.0.2.14",
+            "frameworkOverride": "C:/Sencha/extjs/framework/ext-5.1.2"
+        },
+        "lockUrlPrefix": false,
+        "exportPath": "",
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "spacesToIndent": 4,
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "installStatus": "Not Installed",
+        "urlPrefix": "http://localhost:7089/Sencha/",
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "sdkPath": "",
+        "projectHasEnabledWebServer": false,
+        "lastBuildSelection": {
+            "value": "webBuild",
+            "display": "Build web app"
+        }
+    },
+    "xdsVersion": "3.2.0",
+    "xdsBuild": 339,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext51",
+    "viewOrderMap": {
+        "view": [
+            "6743fae8-40dd-4c6e-9bb3-5fe1b53d20ac",
+            "aba64380-8699-438e-9493-7317ac95b480",
+            "3fd9829e-f1c6-41bf-a36d-0c100aeb04c0",
+            "3a66d83c-f883-42a3-ba1f-8db51c585b1d",
+            "b76c4312-a8c5-4fcb-b129-08e00b9354a7",
+            "9c22ebb7-87c8-4d2e-b6b8-d6c7633f7731"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "ccf7643e-b295-4845-9f1a-4360b4b7a9ae",
+            "53b6f75b-54a3-4878-87da-268c82011b75",
+            "b93b50b4-6a6a-472f-a13a-410135115812",
+            "029f75ed-8132-4ed0-982a-f00548a57506"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

@@ -1,0 +1,597 @@
+﻿{
+	"personas": [
+		{
+			"idPersona": 1,
+			"nombre": "Martha",
+			"primerApellido": "Ibañez",
+			"segundoApellido": "Jimenez",
+			"genero": "F",
+			"correo": "mibanez@bts.com.mx",
+			"estadoCivil": 2,
+			"tipoIdentificacion": 2,
+			"numeroIdentificacion": "527238732875638",
+			"usuario": "mibanez",
+			"contrasena": "12345",
+			"sede": 1,
+			"habilitado": true,
+			"fechaNacimiento": "1977-04-19T00:00:00",
+			"observaciones": "No hay ninguna observacion..."
+		},
+		{
+			"idPersona": 2,
+			"nombre": "Jorge Mario",
+			"primerApellido": "Apodaca",
+			"segundoApellido": "Mendoza",
+			"genero": "M",
+			"correo": "japodaca@bts.com.mx",
+			"estadoCivil": 1,
+			"tipoIdentificacion": 1,
+			"numeroIdentificacion": "JHSGS35435678",
+			"usuario": "japodaca",
+			"contrasena": "12345",
+			"sede": 2,
+			"habilitado": true,
+			"fechaNacimiento": "1977-02-22T00:00:00",
+			"observaciones": "En proceso de desarrollo de sitio web..."
+		}
+	],
+	"catalogoEstadoCivil": [
+		{
+			"idEstadoCivil": 1,
+			"estadoCivilDescripcion": "Casado"
+		},
+		{
+			"idEstadoCivil": 2,
+			"estadoCivilDescripcion": "Soltero"
+		},
+		{
+			"idEstadoCivil": 3,
+			"estadoCivilDescripcion": "Divorciado"
+		},
+		{
+			"idEstadoCivil": 4,
+			"estadoCivilDescripcion": "Viuda(o)"
+		}
+	],
+	"catalogoTipoIdentificacion": [
+		{
+			"idTipoIdentificacion": 1,
+			"tipoIdentificacionDescripcion": "Credencial de Elector"
+		},
+		{
+			"idTipoIdentificacion": 2,
+			"tipoIdentificacionDescripcion": "Licencia de Conducir"
+		},
+		{
+			"idTipoIdentificacion": 3,
+			"tipoIdentificacionDescripcion": "Pasaporte Mexicano"
+		}
+	],
+	"catalogoSedes": [
+		{
+			"idSede": 1,
+			"sedeDescripcion": "Mexicali, Baja California"
+		},
+		{
+			"idSede": 2,
+			"sedeDescripcion": "Guadalajara, Jalisco"
+		},
+		{
+			"idSede": 3,
+			"sedeDescripcion": "Mexico, D.F."
+		}
+	],
+	"diccionarioDeDatos": {
+		"Persona": [
+			{
+				"type": "int",
+				"name": "idPersona",
+				"config": {
+					"grid": {
+						"xtype": "numbercolumn",
+						"order": 1,
+						"width": 57,
+						"align": "center",
+						"dataIndex": "{0}",
+						"text": "No.",
+						"format": "00"
+					},
+					"form": null
+				}
+			},
+			{
+				"type": "string",
+				"name": "nombre",
+				"config": {
+					"grid": {
+						"xtype": "gridcolumn",
+						"order": 4,
+						"width": 150,
+						"align": "left",
+						"dataIndex": "{0}",
+						"text": "Nombre"
+					},
+					"form": {
+						"xtype": "textfield",
+						"order": 4,
+						"column": 1,
+						"anchor": "100%",
+						"fieldLabel": "Nombre",
+						"labelAlign": "top",
+						"name": "{0}",
+						"allowBlank": false,
+						"enforceMaxLength": true,
+						"maxLength": 100,
+						"bind": {
+							"value": "{{0}.selection.{1}}"
+						}
+					}
+				}
+			},
+			{
+				"type": "string",
+				"name": "primerApellido",
+				"config": {
+					"grid": {
+						"xtype": "gridcolumn",
+						"order": 2,
+						"width": 150,
+						"align": "left",
+						"dataIndex": "{0}",
+						"text": "Primer Apellido"
+					},
+					"form": {
+						"xtype": "textfield",
+						"order": 2,
+						"column": 1,
+						"anchor": "100%",
+						"fieldLabel": "Primer Apellido",
+						"labelAlign": "top",
+						"name": "{0}",
+						"allowBlank": false,
+						"enforceMaxLength": true,
+						"maxLength": 100,
+						"bind": {
+							"value": "{{0}.selection.{1}}"
+						}
+					}
+				}
+			},
+			{
+				"type": "string",
+				"name": "segundoApellido",
+				"config": {
+					"grid": {
+						"xtype": "gridcolumn",
+						"order": 3,
+						"width": 150,
+						"align": "left",
+						"dataIndex": "{0}",
+						"text": "Segundo Apellido"
+					},
+					"form": {
+						"xtype": "textfield",
+						"order": 3,
+						"column": 1,
+						"anchor": "100%",
+						"fieldLabel": "Segundo Apellido",
+						"labelAlign": "top",
+						"name": "{0}",
+						"allowBlank": true,
+						"enforceMaxLength": true,
+						"maxLength": 100,
+						"bind": {
+							"value": "{{0}.selection.{1}}"
+						}
+					}
+				}
+			},
+			{
+				"type": {
+					"calculate": true,
+					"datatype": "string"
+				},
+				"name": "nombreCompleto",
+				"config": {
+					"grid": null,
+					"form": null,
+					"calculate": "function(data) { var nombreCompleto = Ext.String.format('{0} {1} {2}', Ext.isEmpty(data.nombre) ? '' : data.nombre, Ext.isEmpty(data.primerApellido) ? '' : data.primerApellido, Ext.isEmpty(data.segundoApellido) ? '' : data.segundoApellido); nombreCompleto = Ext.String.trim(nombreCompleto); return nombreCompleto; }"
+				}
+			},
+			{
+				"type": "string",
+				"name": "genero",
+				"config": {
+					"grid": {
+						"xtype": "gridcolumn",
+						"order": 6,
+						"width": 120,
+						"dataIndex": "generoCalculado",
+						"text": "Genero"
+					},
+					"form": {
+						"xtype": "radiogroup",
+						"order": 6,
+						"column": 1,
+						"fieldLabel": "Género",
+						"labelWidth": 60,
+						"name": "{0}",
+						"bind": {
+							"value": "{{0}.selection.{1}}"
+						},
+						"items": [
+							{
+								"xtype": "radiofield",
+								"name": "genero",
+								"boxLabel": "Masculino",
+								"checked": true,
+								"inputValue": "M"
+							},
+							{
+								"xtype": "radiofield",
+								"name": "genero",
+								"boxLabel": "Femenino",
+								"inputValue": "F"
+							}
+						]
+					}
+				}
+			},
+			{
+				"type": {
+					"calculate": true,
+					"datatype": "string"
+				},
+				"name": "generoCalculado",
+				"config": {
+					"grid": null,
+					"form": null,
+					"calculate": "function(data) { var generoCalculado = ''; switch(data.genero) { case 'M': generoCalculado = 'Masculino'; break; case 'F': generoCalculado = 'Femenino'; break; case '': generoCalculado = '<span class=\"valorNulo\">No Definido</span>'; break; default: generoCalculado = '<span class=\"valorNulo\">No Aplica</span>'; break; } return generoCalculado; }"
+				}
+			},
+			{
+				"type": "string",
+				"name": "correo",
+				"config": {
+					"grid": {
+						"xtype": "gridcolumn",
+						"order": 8,
+						"width": 250,
+						"align": "left",
+						"dataIndex": "{0}",
+						"text": "Correo Electrónico"
+					},
+					"form": {
+						"xtype": "textfield",
+						"order": 8,
+						"column": 1,
+						"anchor": "100%",
+						"fieldLabel": "Correo Electrónico",
+						"labelAlign": "top",
+						"name": "{0}",
+						"allowBlank": true,
+						"enforceMaxLength": true,
+						"maxLength": 100,
+						"bind": {
+							"value": "{{0}.selection.{1}}"
+						}
+					}
+				}
+			},
+			{
+				"type": "int",
+				"name": "estadoCivil",
+				"config": {
+					"grid": {
+						"xtype": "widgetcolumn",
+						"order": 9,
+						"width": 130,
+						"dataIndex": "{0}",
+						"text": "Estado Civil",
+						"stopSelection": false,
+						"widget": {
+							"xtype": "combobox",
+							"readOnly": true,
+							"editable": false,
+							"autoSelect": false,
+							"displayField": "estadoCivilDescripcion",
+							"queryMode": "local",
+							"selectOnTab": false,
+							"valueField": "idEstadoCivil",
+							"bind": {
+								"store": "{strEstadosCiviles}"
+							}
+						}
+					},
+					"form": {
+						"xtype": "combobox",
+						"order": 9,
+						"column": 1,
+						"anchor": "100%",
+						"fieldLabel": "Estado Civil",
+						"labelAlign": "top",
+						"name": "{0}",
+						"editable": false,
+						"displayField": "estadoCivilDescripcion",
+						"queryMode": "local",
+						"valueField": "idEstadoCivil",
+						"bind": {
+							"value": "{{0}.selection.{1}}",
+							"store": "{strEstadosCiviles}"
+						}
+					}
+				}
+			},
+			{
+				"type": "int",
+				"name": "tipoIdentificacion",
+				"config": {
+					"grid": {
+						"xtype": "widgetcolumn",
+						"order": 10,
+						"width": 200,
+						"dataIndex": "{0}",
+						"text": "Tipo de Identificación",
+						"stopSelection": false,
+						"widget": {
+							"xtype": "combobox",
+							"readOnly": true,
+							"editable": false,
+							"displayField": "tipoIdentificacionDescripcion",
+							"queryMode": "local",
+							"valueField": "idTipoIdentificacion",
+							"bind": {
+								"store": "{strTiposIdentificacion}"
+							}
+						}
+					},
+					"form": {
+						"xtype": "combobox",
+						"order": 10,
+						"column": 1,
+						"anchor": "100%",
+						"fieldLabel": "Tipo de Identificación",
+						"labelAlign": "top",
+						"name": "{0}",
+						"editable": false,
+						"displayField": "tipoIdentificacionDescripcion",
+						"forceSelection": true,
+						"queryMode": "local",
+						"valueField": "idTipoIdentificacion",
+						"bind": {
+							"value": "{{0}.selection.{1}}",
+							"store": "{strTiposIdentificacion}"
+						}
+					}
+				}
+			},
+			{
+				"type": "string",
+				"name": "numeroIdentificacion",
+				"config": {
+					"grid": {
+						"xtype": "gridcolumn",
+						"order": 11,
+						"width": 180,
+						"align": "left",
+						"dataIndex": "{0}",
+						"text": "Numero Identificación"
+					},
+					"form": {
+						"xtype": "textfield",
+						"order": 11,
+						"column": 1,
+						"anchor": "100%",
+						"padding": "0 0 10 0",
+						"fieldLabel": "Numero de Identificación",
+						"labelAlign": "top",
+						"name": "{0}",
+						"bind": {
+							"value": "{{0}.selection.{1}}"
+						}
+					}
+				}
+			},
+			{
+				"type": "string",
+				"name": "usuario",
+				"config": {
+					"grid": {
+						"xtype": "gridcolumn",
+						"order": 12,
+						"width": 100,
+						"align": "left",
+						"dataIndex": "{0}",
+						"text": "Usuario"
+					},
+					"form": {
+						"xtype": "textfield",
+						"order": 12,
+						"column": 1,
+						"anchor": "100%",
+						"fieldLabel": "Usuario",
+						"labelAlign": "top",
+						"name": "{0}",
+						"allowBlank": false,
+						"enforceMaxLength": true,
+						"maxLength": 100,
+						"bind": {
+							"value": "{{0}.selection.{1}}"
+						}
+					}
+				}
+			},
+			{
+				"type": "string",
+				"name": "contrasena",
+				"config": {
+					"grid": {
+						"xtype": "widgetcolumn",
+						"order": 13,
+						"width": 126,
+						"dataIndex": "{0}",
+						"text": "Contraseña",
+						"stopSelection": false,
+						"widget": {
+							"xtype": "textfield",
+							"inputType": "password",
+							"readOnly": true,
+							"editable": false
+						}
+					},
+					"form": {
+						"xtype": "textfield",
+						"order": 13,
+						"column": 1,
+						"anchor": "100%",
+						"name": "{0}",
+						"fieldLabel": "Contraseña",
+						"labelAlign": "top",
+						"inputType": "password",
+						"allowBlank": false,
+						"enforceMaxLength": true,
+						"maxLength": 10,
+						"bind": {
+							"value": "{{0}.selection.{1}}"
+						}
+					}
+				}
+			},
+			{
+				"type": "int",
+				"name": "sede",
+				"config": {
+					"grid": {
+						"xtype": "widgetcolumn",
+						"order": 14,
+						"width": 200,
+						"dataIndex": "{0}",
+						"text": "Sede",
+						"stopSelection": false,
+						"widget": {
+							"xtype": "combobox",
+							"readOnly": true,
+							"editable": false,
+							"displayField": "sedeDescripcion",
+							"queryMode": "local",
+							"valueField": "idSede",
+							"bind": {
+								"store": "{strSedes}"
+							}
+						}
+					},
+					"form": {
+						"xtype": "combobox",
+						"order": 14,
+						"column": 1,
+						"anchor": "100%",
+						"fieldLabel": "Sede",
+						"labelAlign": "top",
+						"name": "{0}",
+						"editable": false,
+						"displayField": "sedeDescripcion",
+						"forceSelection": true,
+						"queryMode": "local",
+						"valueField": "idSede",
+						"bind": {
+							"value": "{{0}.selection.{1}}",
+							"store": "{strSedes}"
+						}
+					}
+				}
+			},
+			{
+				"type": "boolean",
+				"name": "habilitado",
+				"config": {
+					"grid": {
+						"xtype": "gridcolumn",
+						"order": 15,
+						"align": "center",
+						"dataIndex": "habilitadoCalculado",
+						"text": "Habilitado"
+					},
+					"form": {
+						"xtype": "checkboxfield",
+						"order": 15,
+						"column": 1,
+						"fieldLabel": "Habilitado",
+						"name": "{0}",
+						"boxLabel": "Si?",
+						"bind": {
+							"value": "{{0}.selection.{1}}"
+						}
+					}
+				}
+			},
+			{
+				"type": {
+					"calculate": true,
+					"datatype": "string"
+				},
+				"name": "habilitadoCalculado",
+				"config": {
+					"grid": null,
+					"form": null,
+					"calculate": "function(data) { var habilitadoCalculado = '';  if(data.habilitado) { habilitadoCalculado = 'Si';  } else { habilitadoCalculado = 'No';  } return habilitadoCalculado; }"
+				}
+			},
+			{
+				"type": "date",
+				"name": "fechaNacimiento",
+				"dateFormat": "c",
+				"config": {
+					"grid": {
+						"xtype": "datecolumn",
+						"order": 17,
+						"width": 178,
+						"align": "center",
+						"dataIndex": "{0}",
+						"text": "Fecha de Nacimiento",
+						"format": "d/m/Y"
+					},
+					"form": {
+						"xtype": "datefield",
+						"order": 17,
+						"column": 2,
+						"anchor": "100%",
+						"fieldLabel": "Fecha de Nacimiento",
+						"labelAlign": "top",
+						"name": "{0}",
+						"bind": {
+							"value": "{{0}.selection.{1}}"
+						}
+					}
+				}
+			},
+			{
+				"type": "string",
+				"name": "observaciones",
+				"config": {
+					"grid": {
+						"xtype": "gridcolumn",
+						"order": 18,
+						"width": 400,
+						"dataIndex": "{0}",
+						"text": "Observaciones"
+					},
+					"form": {
+						"xtype": "textareafield",
+						"order": 18,
+						"column": 2,
+						"anchor": "100%",
+						"fieldLabel": "Observaciones",
+						"labelAlign": "top",
+						"name": "{0}",
+						"enforceMaxLength": true,
+						"maxLength": 500,
+						"enterIsSpecial": true,
+						"bind": {
+							"value": "{{0}.selection.{1}}"
+						}
+					}
+				}
+			}
+		]
+	}
+}

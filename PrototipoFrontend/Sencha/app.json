@@ -1,0 +1,105 @@
+{
+   "name": "PrototipoWeb",
+   "indexHtmlPath": "index.html",
+   "classpath": "${app.dir}/app,${app.dir}/app/override/form/",
+   "overrides": "${app.dir}/overrides",
+   "framework": "ext",
+   "theme": "ext-theme-neptune-53b6f75b-54a3-4878-87da-268c82011b75",
+   "requires": [
+      "ext-locale"
+   ],
+   "locale": "es",
+   "sass": {
+      "namespace": "PrototipoWeb"
+   },
+   "js": [
+      {
+         "path": "${framework.dir}/build/ext-all-rtl-debug.js"
+      },
+      {
+         "path": "app.js",
+         "bundle": true
+      }
+   ],
+   "css": [
+      {
+         "path": "bootstrap.css",
+         "bootstrap": true
+      },
+      {
+         "path": "resources/css/animate.min.css",
+         "remote": true,
+         "update": "full"
+      },
+      {
+         "path": "resources/css/font-awesome.min.css",
+         "remote": true,
+         "update": "full"
+      }
+   ],
+   "production": {
+      "loader": {
+         "cache": true
+      }
+   },
+   "testing": {},
+   "development": {},
+   "bootstrap": {
+      "base": "${app.dir}",
+      "manifest": "bootstrap.json",
+      "microloader": "bootstrap.js",
+      "css": "bootstrap.css"
+   },
+   "output": {
+      "base": "${workspace.build.dir}/${build.environment}/${app.name}",
+      "page": {
+         "path": "index.html",
+         "enable": true
+      },
+      "microloader": {
+         "path": "microloader.js",
+         "embed": false,
+         "enable": true
+      },
+      "cache": {
+         "enable": true
+      },
+      "deltas": {
+         "enable": true
+      }
+   },
+   "appCache": {
+      "cache": [
+         "app.js",
+         "app.json",
+         "microloader.js",
+         "resources/PrototipoWeb-all.css",
+         "resources/PrototipoWeb-all_01.css",
+         "resources/PrototipoWeb-all_02.css",
+         "resources/css/font-awesome.min.css",
+         "resources/css/animate.min.css",
+         "data/configuracion.json"
+      ],
+      "network": [
+         "*"
+      ],
+      "fallback": []
+   },
+   "resources": [
+      "data/database.json",
+      "data/configuracion.json"
+   ],
+   "ignore": [
+      "(^|/)CVS(/?$|/.*?$)"
+   ],
+   "archivePath": "archive",
+   "slicer": {
+      "js": [
+         {
+            "path": "${app.dir}/sass/example/custom.js",
+            "isWidgetManifest": true
+         }
+      ]
+   },
+   "id": "5a9326af-b543-4127-b95a-1ea21394d5bf"
+}

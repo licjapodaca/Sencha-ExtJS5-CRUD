@@ -1,0 +1,18 @@
+﻿[
+  {
+    "idEstadoCivil": 1,
+    "estadoCivilDescripcion": "Casado"
+  },
+  {
+    "idEstadoCivil": 2,
+    "estadoCivilDescripcion": "Soltero"
+  },
+  {
+    "idEstadoCivil": 3,
+    "estadoCivilDescripcion": "Divorciado"
+  },
+  {
+    "idEstadoCivil": 4,
+    "estadoCivilDescripcion": "Viuda(o)"
+  }
+]

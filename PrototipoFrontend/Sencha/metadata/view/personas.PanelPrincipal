@@ -1,0 +1,484 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": null,
+        "designer|userAlias": "panelprincipal",
+        "designer|userClassName": "personas.PanelPrincipal",
+        "layout": "border",
+        "reference": null,
+        "style": "background-color: #FFFFFF;"
+    },
+    "name": "MyViewport",
+    "configAlternates": {
+        "style": "string"
+    },
+    "designerId": "6743fae8-40dd-4c6e-9bb3-5fe1b53d20ac",
+    "viewControllerInstanceId": "3fd9829e-f1c6-41bf-a36d-0c100aeb04c0",
+    "viewModelInstanceId": "aba64380-8699-438e-9493-7317ac95b480",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "collapsed": true,
+                "collapsible": true,
+                "glyph": "xf0c1@FontAwesome",
+                "height": null,
+                "itemId": "pnlHeader",
+                "layout|flex": 0,
+                "layout|region": "north",
+                "title": "Cambio de Conexiones"
+            },
+            "name": "MyPanel4",
+            "designerId": "5ba92aa7-6ce8-4d47-8695-8cf42c368a91",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top",
+                        "height": null,
+                        "itemId": "tlbUrls"
+                    },
+                    "name": "MyToolbar1",
+                    "designerId": "4f9b561e-465a-40d1-bd96-669ee102bb73",
+                    "cn": [
+                        {
+                            "type": "Ext.container.ButtonGroup",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "columns": 2,
+                                "frame": false,
+                                "layout|flex": null,
+                                "title": "MongoDB"
+                            },
+                            "name": "MyButtonGroup",
+                            "designerId": "7e26b0d8-ecac-4a3e-aba1-bd8f299351c9",
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "glyph": "xf0c1@FontAwesome",
+                                        "itemId": "btnMongoNodejs",
+                                        "text": "Urls Node.js"
+                                    },
+                                    "name": "MyButton6",
+                                    "designerId": "5809e124-9af5-4fba-963b-6521aef29c09",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onBtnMongoNodejsClick",
+                                                "implHandler": [
+                                                    ""
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "name": "onBtnMongoNodejsClick",
+                                            "designerId": "56d9ac43-77e0-4f61-b607-fa3127f5fdc4"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "glyph": "xf0c1@FontAwesome",
+                                        "itemId": "btnMongoWebAPI",
+                                        "text": "Urls Web API"
+                                    },
+                                    "name": "MyButton2",
+                                    "designerId": "d06a97b9-3b49-423f-8258-de5ec2a98e79",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onBtnMongoWebAPIClick",
+                                                "implHandler": [
+                                                    ""
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "name": "onBtnMongoWebAPIClick",
+                                            "designerId": "b2c276db-1398-413c-83d5-6ea80a8f088d"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.container.ButtonGroup",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "columns": 2,
+                                "frame": false,
+                                "layout|flex": null,
+                                "title": "Oracle"
+                            },
+                            "name": "MyButtonGroup1",
+                            "designerId": "0d9dac48-a36d-4faa-b6de-12802fb2cffc",
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "glyph": "xf0c1@FontAwesome",
+                                        "itemId": "btnOracleNodejs",
+                                        "text": "Urls Node.js"
+                                    },
+                                    "name": "MyButton6",
+                                    "designerId": "745b6d2d-883a-42ca-9d01-bb6823e23219",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onBtnOracleNodejsClick",
+                                                "implHandler": [
+                                                    ""
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "name": "onBtnOracleNodejsClick",
+                                            "designerId": "abcdd272-619b-4a7a-abcd-5cd129d43d18"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "glyph": "xf0c1@FontAwesome",
+                                        "itemId": "btnOracleWebAPI",
+                                        "text": "Urls Web API"
+                                    },
+                                    "name": "MyButton7",
+                                    "designerId": "8cd288c6-4a30-4e9d-b640-970db1dc2fab",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onBtnOracleWebAPIClick",
+                                                "implHandler": [
+                                                    ""
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "name": "onBtnOracleWebAPIClick",
+                                            "designerId": "657672bd-ebaa-4c1b-a937-4eb7759abf9d"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.container.ButtonGroup",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "columns": 2,
+                                "frame": false,
+                                "layout|flex": null,
+                                "title": "Local"
+                            },
+                            "name": "MyButtonGroup2",
+                            "designerId": "a2aa20db-baaa-402d-a22d-c5f78bf44c27",
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "glyph": "xf0c1@FontAwesome",
+                                        "itemId": "btnCacheDatos",
+                                        "text": "Cache de Datos"
+                                    },
+                                    "name": "MyButton6",
+                                    "designerId": "7ed1f25d-e8f4-4b4f-b919-8389f9a4caf5",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onBtnCacheDatosClick",
+                                                "implHandler": [
+                                                    ""
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "name": "onBtnCacheDatosClick",
+                                            "designerId": "bc97a856-fdba-41b4-80f6-13f8b93be8b5"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "glyph": "xf0c1@FontAwesome",
+                                        "itemId": "btnCacheDatosDefinicion",
+                                        "text": "API Documentation"
+                                    },
+                                    "name": "MyButton3",
+                                    "designerId": "9751aa5b-a16f-4eda-8118-c9d524d41447",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onBtnCacheDatosDefinicionClick",
+                                                "implHandler": [
+                                                    ""
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "name": "onBtnCacheDatosDefinicionClick",
+                                            "designerId": "1968a2db-75bf-4430-85bd-b9b8104625bd"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "tabOpciones",
+                "layout|region": "center",
+                "margin": "10 10 10 10",
+                "reference": "tabOpciones"
+            },
+            "name": "MyTabPanel",
+            "designerId": "2ccba1f5-ae33-4d33-9d49-31fb19784227",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "bordeTab"
+                        ],
+                        "glyph": null,
+                        "itemId": "tab2",
+                        "layout": "border",
+                        "title": "<i class=\"fa fa-cog fa-spin fa-lg\"></i> Prototipo Web Basico - Dinamico"
+                    },
+                    "name": "MyPanel2",
+                    "designerId": "3ec4f973-0d10-4ab4-bc3a-e417a1b3fb6f",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "glyph": null
+                            },
+                            "name": "TabConfig",
+                            "designerId": "578f4bbe-0ada-4bb3-94ed-5c3e8e5b7fed"
+                        },
+                        {
+                            "type": "Ext.container.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "container|align": "center",
+                                "container|pack": "center",
+                                "designer|displayName": "cntEncabezado",
+                                "height": 76,
+                                "layout": "vbox",
+                                "layout|flex": 0,
+                                "layout|region": "north",
+                                "style": "background-color: #e6e6e6"
+                            },
+                            "name": "MyContainer3",
+                            "configAlternates": {
+                                "style": "string"
+                            },
+                            "designerId": "b303221c-8189-4ce2-b4ab-7a0e7eab165b",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "mensaje",
+                                            "animated fadeIn",
+                                            "delayAnimation"
+                                        ],
+                                        "designer|displayName": "lblMensaje",
+                                        "height": null,
+                                        "html": "<i class=\"fa fa-tag fa-2x\"></i> Para dar de alta un nuevo elemento seleccione el botón <span class=\"aviso\">Nuevo registro</span> y para borrar un elemento seleccione <span class=\"aviso\">Borrar registro</span>.",
+                                        "layout|flex": 0,
+                                        "margin": null,
+                                        "padding": null,
+                                        "text": null
+                                    },
+                                    "name": "MyLabel",
+                                    "designerId": "85e72c38-7e7b-4eb9-909c-b66e7c606b20"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.panel.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "glyph": "xf0c0@FontAwesome",
+                                "itemId": "pnlDinamico",
+                                "layout": "fit",
+                                "layout|flex": 1,
+                                "layout|region": "center",
+                                "reference": "pnlDinamico",
+                                "title": "Personas Registradas"
+                            },
+                            "name": "MyPanel3",
+                            "designerId": "6ab1c88b-5aa3-4f33-93f4-9a348d6a9725"
+                        }
+                    ]
+                },
+                {
+                    "type": "viewcontrollereventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onTabpanelTabChange",
+                        "implHandler": [
+                            ""
+                        ],
+                        "name": "tabchange",
+                        "scope": "me"
+                    },
+                    "name": "onTabpanelTabChange",
+                    "designerId": "02c646a9-d49b-4005-9a49-a57017862d89"
+                }
+            ]
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onViewportBeforeRender",
+                "implHandler": [
+                    ""
+                ],
+                "name": "beforerender",
+                "scope": "me"
+            },
+            "name": "onViewportBeforeRender",
+            "designerId": "4e1b884e-4014-460c-83ec-fd896af9ca19"
+        }
+    ]
+}

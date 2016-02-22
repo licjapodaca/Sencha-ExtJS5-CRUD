@@ -1,0 +1,37 @@
+{
+	"mongoDbWebApi": {
+		"urlCrudPersonas": "http://172.16.2.15/DFTPAPI/api/personas/M",
+		"urlDiccionario": "http://172.16.2.15/DFTPAPI/api/diccionariodatos/S/M",
+		"urlEstadosCiviles": "http://172.16.2.15/DFTPAPI/api/EstadosCiviles/M",
+		"urlTiposIdentificacion": "http://172.16.2.15/DFTPAPI/api/TiposIdentificacion/M",
+		"urlSedes": "http://172.16.2.15/DFTPAPI/api/Sedes/M"
+	},
+	"mongoDbNodejs": {
+		"urlCrudPersonas": "http://172.16.2.122:8081/api/persona/M",
+		"urlDiccionario": "http://172.16.2.122:8081/api/diccionariodatos/S/M",
+		"urlEstadosCiviles": "http://172.16.2.122:8081/api/estadocivil/M",
+		"urlTiposIdentificacion": "http://172.16.2.122:8081/api/tipoidentificacion/M",
+		"urlSedes": "http://172.16.2.122:8081/api/sede/M"
+	},
+	"oracleWebApi": {
+		"urlCrudPersonas": "http://172.16.2.15/DFTPAPI/api/personas/O",
+		"urlDiccionario": "http://172.16.2.15/DFTPAPI/api/diccionariodatos/S/O",
+		"urlEstadosCiviles": "http://172.16.2.15/DFTPAPI/api/EstadosCiviles/O",
+		"urlTiposIdentificacion": "http://172.16.2.15/DFTPAPI/api/TiposIdentificacion/O",
+		"urlSedes": "http://172.16.2.15/DFTPAPI/api/Sedes/O"
+	},
+	"oracleNodejs": {
+		"urlCrudPersonas": "http://172.16.2.122:8081/api/persona/O",
+		"urlDiccionario": "http://172.16.2.122:8081/api/diccionariodatos/S/O",
+		"urlEstadosCiviles": "http://172.16.2.122:8081/api/estadocivil/O",
+		"urlTiposIdentificacion": "http://172.16.2.122:8081/api/tipoidentificacion/O",
+		"urlSedes": "http://172.16.2.122:8081/api/sede/O"
+	},
+	"cacheDatosWebApi": {
+		"urlCrudPersonas": "http://172.16.10.23:8889/PrototipoServicios/api/persona",
+		"urlDiccionario": "http://172.16.10.23:8889/PrototipoServicios/api/configuracion/getdiccionariodedatos",
+		"urlEstadosCiviles": "http://172.16.10.23:8889/PrototipoServicios/api/catalogos/getestadosciviles",
+		"urlTiposIdentificacion": "http://172.16.10.23:8889/PrototipoServicios/api/catalogos/gettiposidentificacion",
+		"urlSedes": "http://172.16.10.23:8889/PrototipoServicios/api/catalogos/getsedes"
+	}
+}

@@ -1,0 +1,16 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "css_szhqaegw",
+        "remote": true,
+        "update": "full",
+        "url": "resources/css/animate.min.css"
+    },
+    "name": "css",
+    "designerId": "b93b50b4-6a6a-472f-a13a-410135115812"
+}

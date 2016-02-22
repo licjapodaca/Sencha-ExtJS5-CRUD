@@ -1,0 +1,240 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "animated fadeIn"
+        ],
+        "designer|userAlias": "personaswventanacapturapersona",
+        "designer|userClassName": "personas.wVentanaCapturaPersona",
+        "glyph": "xf234@FontAwesome",
+        "height": 768,
+        "layout": "fit",
+        "modal": true,
+        "title": null,
+        "width": 650
+    },
+    "name": "MyWindow",
+    "designerId": "3a66d83c-f883-42a3-ba1f-8db51c585b1d",
+    "viewControllerInstanceId": "9c22ebb7-87c8-4d2e-b6b8-d6c7633f7731",
+    "viewModelInstanceId": "b76c4312-a8c5-4fcb-b129-08e00b9354a7",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": null,
+                "collapsed": null,
+                "collapsible": false,
+                "container|align": "stretch",
+                "defaultFocus": null,
+                "defaults": [
+                    "{",
+                    "padding: 10",
+                    "}"
+                ],
+                "designer|uiInterfaceName": "light",
+                "height": null,
+                "itemId": "frmModificacionDatos",
+                "layout": "hbox",
+                "maxWidth": null,
+                "minWidth": null,
+                "modelValidation": null,
+                "reference": "frmModificacionDatos",
+                "title": null,
+                "titleCollapse": null,
+                "twoWayBindable": null,
+                "ui": "light",
+                "width": null
+            },
+            "name": "MyForm",
+            "designerId": "5f00e392-cfc3-4b90-9a40-51d5b2f69b54",
+            "viewControllerInstanceId": "cd61c3fc-4ff4-4e01-892b-e2b2d0ef2fe4",
+            "viewModelInstanceId": "83c45b9e-2bcb-43b3-9144-64ea5b607439",
+            "cn": [
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "pnlLadoIzq",
+                        "itemId": "column1",
+                        "layout": "anchor",
+                        "layout|flex": 1,
+                        "padding": null,
+                        "reference": "cntCol1",
+                        "scrollable": "true"
+                    },
+                    "name": "MyContainer",
+                    "designerId": "83d9bcd9-916b-4273-bfd1-994778670ea5"
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "pnlLadoDer",
+                        "itemId": "column2",
+                        "layout": "anchor",
+                        "layout|flex": 1,
+                        "reference": "cntCol2",
+                        "scrollable": "true"
+                    },
+                    "name": "MyContainer1",
+                    "designerId": "a5f0b6ba-ad62-40c8-aa8c-557cf7522517"
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|pack": "end",
+                        "defaults": null,
+                        "designer|uiInterfaceName": "untitled-ui-1",
+                        "dock": "bottom",
+                        "hidden": [
+                            "{desapareceToolbar}"
+                        ],
+                        "itemId": "tlbOpciones",
+                        "layout|flex": 1,
+                        "ui": "untitled-ui-1"
+                    },
+                    "name": "MyToolbar2",
+                    "configAlternates": {
+                        "hidden": "binding"
+                    },
+                    "designerId": "4e1d135c-c9c8-49a0-a1c6-8af5d6759b69",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "Aceptar",
+                                "disabled": true,
+                                "formBind": true,
+                                "glyph": "xf058@FontAwesome",
+                                "itemId": "btnAceptar",
+                                "layout|flex": null,
+                                "reference": "btnAceptar",
+                                "text": "Aceptar"
+                            },
+                            "name": "MyButton4",
+                            "designerId": "8f324953-5a62-4272-bb3c-598bf578841a",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnAceptarClick",
+                                        "implHandler": [
+                                            ""
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "name": "onBtnAceptarClick",
+                                    "designerId": "f08d34fd-8de6-48dd-bb32-a9aa4a11167f"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "Cancelar",
+                                "glyph": "xf00d@FontAwesome",
+                                "itemId": "btnCancelar",
+                                "layout|flex": null,
+                                "text": "Cancelar"
+                            },
+                            "name": "MyButton5",
+                            "designerId": "8e8dc99e-99d5-4a68-af7c-5576b61c20e7",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnCancelarClick",
+                                        "implHandler": [
+                                            ""
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "name": "onBtnCancelarClick",
+                                    "designerId": "75542f82-88e1-4d20-8fc0-3b8b1cce7cb9"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onWindowAfterRender",
+                "implHandler": [
+                    ""
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "name": "onWindowAfterRender",
+            "designerId": "74e2527e-1873-4689-b336-b1256cfdba3e"
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onWindowBeforeRender",
+                "name": "beforerender",
+                "scope": "me"
+            },
+            "name": "onWindowBeforeRender",
+            "designerId": "e9a020a0-de83-4c15-8b2a-e4945ad3d94d"
+        }
+    ]
+}
