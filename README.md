@@ -2,6 +2,13 @@
 
 This is a web application implementing **CRUD Operations** using the following software architecture:
 
+## Software prerequisites to use this project
+
+- [x] Visual Studio 2015 ([website](https://www.visualstudio.com/products/vs-2015-product-editions))
+- [x] Sencha Architect 3.2 Build 339 ([website](https://www.sencha.com/products/architect/#overview))
+- [x] Sencha ExtJS 5.1.2 ([website](https://www.sencha.com/products/extjs/#overview))
+- [x] Sencha Command 6.0.2.14 ([website](https://www.sencha.com/products/extjs/cmd-download/))
+
 ## Frontend
 
 - [x] Sencha **ExtJS 5.1.2**
