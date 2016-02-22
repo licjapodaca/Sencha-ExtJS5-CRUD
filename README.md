@@ -16,3 +16,10 @@ This is a web application implementing **CRUD Operations** using the following s
 - [x] **ASP.NET 5** with **Web API 2**
 - [x] **Memory Data Caching** instead Database just for testing purpouses
 
+> **Note:** The project called ``PrototipoServicios`` was made in ``ASP.NET 5 with Web API 2`` to create API RestFul services that provide the CRUD operations to the Frontend using Memory Data Caching on them, the programming language that was used is ``C#``.
+
+# The instructions for setup the project will be soon
+
+1. ...
+2. ...
+3. ...
