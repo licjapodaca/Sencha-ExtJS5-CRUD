@@ -271,6 +271,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Properties\PublishProfiles\SVR-APPPGR12 - DFTP Servicios.pubxml.user" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -303,6 +304,7 @@
     <Content Include="data\estadosciviles.json" />
     <Content Include="data\tiposidentificacion.json" />
     <Content Include="data\sedes.json" />
+    <None Include="Properties\PublishProfiles\SVR-APPPGR12 - DFTP Servicios.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
