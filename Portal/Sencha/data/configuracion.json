@@ -28,10 +28,10 @@
 		"urlSedes": "http://172.16.2.122:8081/api/sede/O"
 	},
 	"cacheDatosWebApi": {
-		"urlCrudPersonas": "http://172.16.10.23:8889/PrototipoServicios/api/persona",
-		"urlDiccionario": "http://172.16.10.23:8889/PrototipoServicios/api/configuracion/getdiccionariodedatos",
-		"urlEstadosCiviles": "http://172.16.10.23:8889/PrototipoServicios/api/catalogos/getestadosciviles",
-		"urlTiposIdentificacion": "http://172.16.10.23:8889/PrototipoServicios/api/catalogos/gettiposidentificacion",
-		"urlSedes": "http://172.16.10.23:8889/PrototipoServicios/api/catalogos/getsedes"
+		"urlCrudPersonas": "http://172.16.3.51:8888/extjs/servicios/api/persona",
+		"urlDiccionario": "http://172.16.3.51:8888/extjs/servicios/api/configuracion/getdiccionariodedatos",
+		"urlEstadosCiviles": "http://172.16.3.51:8888/extjs/servicios/api/catalogos/getestadosciviles",
+		"urlTiposIdentificacion": "http://172.16.3.51:8888/extjs/servicios/api/catalogos/gettiposidentificacion",
+		"urlSedes": "http://172.16.3.51:8888/extjs/servicios/api/catalogos/getsedes"
 	}
 }
