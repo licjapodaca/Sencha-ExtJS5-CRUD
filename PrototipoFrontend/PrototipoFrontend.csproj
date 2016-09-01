@@ -215,6 +215,13 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Sencha\.idea\codeStyleSettings.xml" />
+    <Content Include="Sencha\.idea\encodings.xml" />
+    <Content Include="Sencha\.idea\inspectionProfiles\profiles_settings.xml" />
+    <Content Include="Sencha\.idea\inspectionProfiles\Project_Default.xml" />
+    <Content Include="Sencha\.idea\misc.xml" />
+    <Content Include="Sencha\.idea\modules.xml" />
+    <Content Include="Sencha\.idea\workspace.xml" />
     <Content Include="Sencha\.sencha\app\Boot.js" />
     <Content Include="Sencha\.sencha\app\bootstrap-impl.xml" />
     <Content Include="Sencha\.sencha\app\build-impl.xml" />
@@ -235,13 +242,15 @@
     <Content Include="Sencha\.sencha\workspace\plugin.xml" />
     <Content Include="Sencha\app.js" />
     <Content Include="Sencha\app\clases\Diccionario.js" />
-    <Content Include="Sencha\app\model\EstadoCivil.js" />
-    <Content Include="Sencha\app\model\Persona.js" />
-    <Content Include="Sencha\app\model\Sede.js" />
-    <Content Include="Sencha\app\model\TipoIdentificacion.js" />
-    <Content Include="Sencha\app\view\generales\PanelPrincipal.js" />
-    <Content Include="Sencha\app\view\generales\PanelPrincipalViewController.js" />
-    <Content Include="Sencha\app\view\generales\PanelPrincipalViewModel.js" />
+    <Content Include="Sencha\app\clases\ProcesoCarga.js" />
+    <Content Include="Sencha\app\view\override\personas\PanelPrincipalViewController.js" />
+    <Content Include="Sencha\app\view\override\personas\wVentanaCapturaPersonaViewController.js" />
+    <Content Include="Sencha\app\view\personas\PanelPrincipal.js" />
+    <Content Include="Sencha\app\view\personas\PanelPrincipalViewController.js" />
+    <Content Include="Sencha\app\view\personas\PanelPrincipalViewModel.js" />
+    <Content Include="Sencha\app\view\personas\wVentanaCapturaPersona.js" />
+    <Content Include="Sencha\app\view\personas\wVentanaCapturaPersonaViewController.js" />
+    <Content Include="Sencha\app\view\personas\wVentanaCapturaPersonaViewModel.js" />
     <Content Include="Sencha\bootstrap.css" />
     <Content Include="Sencha\bootstrap.js" />
     <Content Include="Sencha\build.xml" />
@@ -333,10 +342,6 @@
     <Content Include="Sencha\app.json.meta" />
     <Content Include="Sencha\metadata\Application" />
     <Content Include="Sencha\metadata\resource\Library" />
-    <Content Include="Sencha\metadata\resource\PrototipoWeb" />
-    <Content Include="Sencha\metadata\view\generales.PanelPrincipal" />
-    <Content Include="Sencha\metadata\view\generales.PanelPrincipalViewController" />
-    <Content Include="Sencha\metadata\view\generales.PanelPrincipalViewModel" />
     <Content Include="Sencha\sass\config.rb" />
     <Content Include="Sencha\sass\example\bootstrap.json" />
     <Content Include="Sencha\Sencha.xds" />
@@ -368,9 +373,22 @@
     <Content Include="Sencha\resources\fonts\fontawesome-webfont.woff2" />
     <Content Include="Sencha\resources\fonts\FontAwesome.otf" />
     <Content Include="Sencha\data\configuracion.json" />
+    <Content Include="Sencha\.idea\.name" />
+    <Content Include="Sencha\.idea\Sencha.iml" />
+    <Content Include="Sencha\metadata\view\personas.PanelPrincipal" />
+    <Content Include="Sencha\metadata\view\personas.PanelPrincipalViewController" />
+    <Content Include="Sencha\metadata\view\personas.PanelPrincipalViewModel" />
+    <Content Include="Sencha\metadata\view\personas.wVentanaCapturaPersona" />
+    <Content Include="Sencha\metadata\view\personas.wVentanaCapturaPersonaViewController" />
+    <Content Include="Sencha\metadata\view\personas.wVentanaCapturaPersonaViewModel" />
+    <Content Include="Sencha\metadata\resource\css_9bb8plos" />
+    <Content Include="Sencha\metadata\resource\css_szhqaegw" />
+    <Content Include="Sencha\metadata\resource\PrototipoWeb01" />
+    <None Include="Sencha\build.settings" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Sencha\metadata\model\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

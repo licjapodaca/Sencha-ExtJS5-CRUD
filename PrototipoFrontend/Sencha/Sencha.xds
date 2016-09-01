@@ -3,7 +3,7 @@
     "settings": {
         "cmd": {
             "license": "custom",
-            "cmdVersion": "6.0.2.14",
+            "cmdVersion": "6.1.3.42",
             "frameworkOverride": "C:/Sencha/extjs/framework/ext-5.1.2"
         },
         "lockUrlPrefix": false,
